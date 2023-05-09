@@ -1,0 +1,7 @@
+{
+  "name": "SJionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
