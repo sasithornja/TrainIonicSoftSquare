@@ -1,0 +1,50 @@
+<!-- Workshop -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>BMR Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div style="text-align: center;">
+    <ion-toolbar>
+      <ion-title>BMR Calculator</ion-title>
+    </ion-toolbar>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-col>
+            <h4>Select Gender</h4>
+            <ion-radio-group [(ngModel)]="gender">
+              <ion-col>
+                <ion-item>
+                  <ion-radio value="male">Male</ion-radio>
+                </ion-item>
+              </ion-col>
+            <ion-col>
+              <ion-item>
+              <ion-radio value="female" >Female</ion-radio>
+            </ion-item>
+            </ion-col>
+            </ion-radio-group>  
+          </ion-col>
+        </ion-item>
+       <ion-item>
+        <ion-input label="Weight: " type="number" [clearInput]="true" placeholder="Enter weight (kg)" [(ngModel)]="weight"> </ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-input label="Height: " type="number" [clearInput]="true" placeholder="Enter height (m)" [(ngModel)]="height"> </ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-input label="Age: " type="number" [clearInput]="true" placeholder="Enter age (y)" [(ngModel)]="age"> </ion-input>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div style="text-align: center;">
+    <ion-button id="alert" (click)="BMRCal()">Calculator</ion-button>
+    <ion-alert trigger="alert" header="Your BMR is" message="{{ bmr }}!" [buttons]="alertButtonBMR"></ion-alert>
+  </div>
+</ion-content>
+<!-- Workshop -->

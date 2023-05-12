@@ -1,3 +1,20 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="bmi" (click)="navigateToPage1()">
+        <ion-icon name="triangle-outline"></ion-icon>
+        BMI
+      </ion-tab-button>
+      <ion-tab-button tab="bmr" (click)="navigateToPage2()">
+        <ion-icon name="stop-outline"></ion-icon>
+        BMR
+      </ion-tab-button>
+      <ion-tab-button tab="aboutMe" (click)="navigateToPage3()">
+        <ion-icon name="woman-outline"></ion-icon>
+        About me
+      </ion-tab-button>
+      
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>
